@@ -29,8 +29,8 @@ services:
     env_file:
       - .env
     ports:
-      - "81:80"
-      - "444:443"
+      - "${PORT_NEXTCLOUD_HTTP}:80"
+      - "${PORT_NEXTCLOUD_HTTPS}:443"
     depends_on:
       - postgres
     volumes:
